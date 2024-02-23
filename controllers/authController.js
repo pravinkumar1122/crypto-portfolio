@@ -15,7 +15,6 @@ exports.login = async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // Find user by email
         const user = await User.findOne({ email });
         if (!user) {
             return res.render('login', {
