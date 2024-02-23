@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>About Page</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>USER Name</th>
+                <th>EMAIL</th>
+                <th>AGE</th>
+                <!-- Add more headers if needed -->
+            </tr>
+        </thead>
+        <tbody>
+            
+            <% users.forEach(db=> { %>
+                <tr>
+                    <td><%= db.name %></td>
+                    <td><%= db.email %></td>
+                    <td><%= db.age %></td>
+                    <!-- Add more columns if needed -->
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
